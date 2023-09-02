@@ -72,6 +72,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       publicPath: "",
+      title: "Webpack Sample",
+      filename: "public/index.html",
+      meta: {
+        description: "Some Description",
+      },
     }),
   ],
 };
