@@ -9,6 +9,12 @@ module.exports = {
     filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "./dist"),
     publicPath: "dist/",
+
+    // => Can also use this without clean-webpack-plugin
+    // clean: {
+    //   dry: true,
+    //   keep: /\.css/,
+    // },
   },
   mode: "none",
   module: {
