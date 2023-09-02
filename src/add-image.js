@@ -1,4 +1,4 @@
-import elephant from "./images/elephant.jpg";
+import elephant from "./components/elephantImage/elephant.jpg";
 import altText from "./altText.txt";
 
 function addImage() {
