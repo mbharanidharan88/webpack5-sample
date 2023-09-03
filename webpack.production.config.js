@@ -77,13 +77,26 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       publicPath: "",
-      title: "Webpack Sample",
-      description: "Some Description",
-      filename: "index.html",
+      title: "Webpack Sample - Hello World",
+      description: "Hello World Description",
+      filename: "hello-world.html",
+      chunks: ["hello-world"],
       // meta: {
       //   description: "Some Description",
       // },
-      template: "src/index.hbs",
+      template: "src/page-template.hbs",
+      minify: true, //Default is True
+    }),
+    new HtmlWebpackPlugin({
+      publicPath: "",
+      title: "Webpack Sample - Elephant",
+      description: "Elephant Description",
+      filename: "elephant.html",
+      chunks: ["elephant"],
+      // meta: {
+      //   description: "Some Description",
+      // },
+      template: "src/page-template.hbs",
       minify: true, //Default is True
     }),
   ],
