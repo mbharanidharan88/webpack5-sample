@@ -84,6 +84,7 @@ module.exports = {
       //   description: "Some Description",
       // },
       template: "src/index.hbs",
+      minify: true, //Default is True
     }),
   ],
 };
