@@ -2,6 +2,7 @@ import HelloWorldButton from "./components/hello-world-button/hello-world-button
 import Heading from "./components/heading/heading.js";
 import addImage from "./add-image";
 import _ from "lodash";
+import React from "react";
 
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();
