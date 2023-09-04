@@ -4,9 +4,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    "hello-world": "./src/hello-world.js",
+    elephant: "./src/elephant.js",
+  },
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./dist"),
     publicPath: "dist/",
 
@@ -86,13 +89,26 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       publicPath: "",
+      filename: "hello-world.html",
+      chunks: ["hello-world"],
       title: "Webpack Sample",
       description: "Some Description",
-      filename: "index.html",
+      template: "src/page-template.hbs",
       // meta: {
       //   description: "Some Description",
       // },
-      template: "src/index.hbs",
+    }),
+    new HtmlWebpackPlugin({
+      publicPath: "",
+      title: "Webpack Sample",
+      description: "Some Description",
+      filename: "elephant.html",
+      chunks: ['elephant'],
+      template: "src/page-template.hbs",
+      // meta: {
+      //   description: "Some Description",
+      // },
+      
     }),
   ],
 };
